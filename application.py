@@ -7,7 +7,7 @@ from sklearn.preprocessing import StandardScaler
 app = Flask(__name__)
 
 ridge_model = pickle.load(open('models/ridge.pkl','rb'))
-standard_scaler = pickle.load(open('models/standard_scaler.pkl','rb'))
+standard_scaler = pickle.load(open('models/standardscaler.pkl','rb'))
 
 ## Route for home page
 @app.route('/')
@@ -24,6 +24,7 @@ def predict_datapoint():
         FFMC = float(request.form.get('FFMC'))
         DMC = float(request.form.get('DMC'))
         ISI = float(request.form.get('ISI'))
+        # BUI = float(request.form.get('BUI'))
         Classes = float(request.form.get('Classes'))
         Region = float(request.form.get('Region'))
         

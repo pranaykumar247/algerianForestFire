@@ -1,1 +1,80 @@
-<h1>Welcome To The Home Page</h1>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Algerian Forest Fire Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image: linear-gradient(to right, #FBB741,orange);
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fbe641;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #009688;
+            text-align: center; /* Center the heading */
+        }
+        p {
+            color: #555;
+            line-height: 1.6;
+        }
+        img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin: 20px auto; /* Center the image */
+            border: 5px solid #009688; /* Add a border */
+            border-radius: 10px; /* Rounded corners */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Shadow effect */
+        }
+        .center {
+            text-align: center; /* Center the button */
+        }
+        .prediction-button {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: red;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            font-size: 25px;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        .prediction-button:hover {
+            background-color: #00796b;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Algerian Forest Fire Details</h1>
+        
+        <!-- Introduction -->
+        <p>
+            On August 6, 2023, a significant forest fire occurred in the beautiful region of Tizi Ouzou, Algeria. The fire, driven by strong winds and dry conditions, quickly spread across vast expanses of land, leaving a trail of devastation in its wake. This tragic event serves as a stark reminder of the fragile balance between human activities and nature's delicate ecosystems.
+        </p>
+        
+        <!-- Fire Damage Description -->
+        <h2 style="color: #f44336;">Fire Damage</h2>
+        <p>
+            The Algerian forest fire wreaked havoc on the local environment, consuming lush forests, fertile lands, and vital habitats for numerous species. Wildlife, already facing challenges due to habitat loss, suffered immensely as their homes turned into ashes. The fire's impact on flora and fauna is a painful testament to the consequences of neglecting responsible land management practices.
+        </p>
+        
+        <!-- Display Image from Link -->
+        <img src="https://i1.wp.com/www.middleeastmonitor.com/wp-content/uploads/2021/08/20210812-Algeria-continues-battle-against-wildfires%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B%E2%80%8B_15.jpg?resize=1200,800&quality=85&strip=all&zoom=1&ssl=1" alt="Algerian Forest Fire" />
+        
+        <!-- Centered Prediction Button -->
+        <div class="center">
+            <a href="{{ url_for('predict_datapoint') }}" class="prediction-button">Predict the fire</a>
+        </div>
+    </div>
+</body>
+</html>
